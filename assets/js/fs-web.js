@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.readFile = exports.readDir = void 0;
-async function readDir(path, init) {
+exports.readFile = exports.__readDir = void 0;
+async function __readDir(path, init) {
     let d = new DOMParser().parseFromString(await (await fetch(path, init)).text(), "text/html"), f = new Set(), n;
     if (!d.querySelector("body.directory"))
         throw Error(`no such file or directory, scandir '${path}'`);
@@ -15,7 +15,7 @@ async function readDir(path, init) {
     });
     return f;
 }
-exports.readDir = readDir;
+exports.__readDir = __readDir;
 async function readFile(path, init) {
     return await (await fetch(path, init)).text();
 }

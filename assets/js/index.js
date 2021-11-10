@@ -23,9 +23,9 @@ var Interface;
         });
     }
     (async function () {
-        await (await fs_web_1.readDir("./pages/Code")).forEach(async (f) => {
-            console.log(await fs_web_1.readFile(f.path));
+        const files = ["random.ts"];
+        files.forEach(async (n) => {
+            console.log(await fs_web_1.readFile(`./pages/Code/${n}`));
         });
     })();
 })(Interface = exports.Interface || (exports.Interface = {}));
-console.log("__dirname: " + __filename);

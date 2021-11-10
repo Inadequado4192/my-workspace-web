@@ -4,7 +4,7 @@ export interface FileInfo {
     data: string;
     path: string;
 }
-export async function readDir(path: string, init?: RequestInit | undefined) {
+export async function __readDir(path: string, init?: RequestInit | undefined) {
     let d = new DOMParser().parseFromString(await (await fetch(path, init)).text(), "text/html"), f = new Set<FileInfo>(), n: string;
     if (!d.querySelector("body.directory")) throw Error(`no such file or directory, scandir '${path}'`)
     Array.from(d.querySelectorAll("#files > li > a")).slice(1).forEach(a => {

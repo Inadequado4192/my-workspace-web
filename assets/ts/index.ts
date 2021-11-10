@@ -1,4 +1,4 @@
-import { readDir, readFile } from "./fs-web";
+import { readFile } from "./fs-web";
 
 export namespace Interface {
     export function get(selectors: string): HTMLElement | null;
@@ -24,9 +24,10 @@ export namespace Interface {
 
     // Show Codes
     (async function () {
-        await (await readDir("./pages/Code")).forEach(async f => {
-            console.log(await readFile(f.path));
+        const files = ["random.ts"] as const;
+        files.forEach(async n => {
+            console.log(await readFile(`./pages/Code/${n}`));
         });
     })();
 }
-console.log("__dirname: " + __filename);
+// console.log("__dirname: " + __filename);
