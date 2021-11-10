@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Rostov";
+    src        : url("./Rostov.ttf") format("ttf");
+    font-weight: 400;
+    font-style : normal;
+}
+
+* {
+    box-sizing : border-box;
+    color      : #EEEEEE;
+    font-family: "Rostov";
+}
+
+body {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    margin          : 0;
+    background-color: #262626;
+    padding         : 40px;
+}
+
+button {
+    background: none;
+    border    : none;
+    outline   : none;
+    cursor    : pointer;
+}
+
+/*/ selects /*/
+#selects {
+    display       : flex;
+    flex-direction: row;
+    margin-bottom : 10px;
+    width         : 100%;
+    overflow      : hidden;
+    border-radius : 5px;
+}
+
+#selects button {
+    color           : #EEEEEE;
+    background-color: #000000;
+    font-size       : 20px;
+    padding         : 20px 40px;
+    flex            : 1;
+}
+
+#selects button.active {
+    color           : #000000;
+    background-color: #EEEEEE;
+}
+
+
+
+
+
+
+#container {
+    width: 100%;
+}
+#container .disabled {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*/ services /*/
+#services {
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+}
+
+#services a {
+    position       : relative;
+    text-decoration: none;
+    overflow       : hidden;
+
+    height: 150px;
+    width : 100%;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+}
+
+#services a:last-child {
+    margin-bottom: 0px;
+}
+
+#services a,
+#services a *,
+#services a span {
+    transition: .5s;
+}
+
+/* #services a:hover {} */
+#services a:hover .preview {
+    filter: none;
+}
+
+#services a:hover span {
+    left   : 30%;
+    opacity: 1;
+}
+
+#services a .preview {
+    position : absolute;
+    left     : 0;
+    top      : 50%;
+    transform: translateY(-50%);
+    width    : 50%;
+    z-index  : -1;
+    filter   : brightness(.5);
+}
+
+#services a::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right   : 0;
+    top     : 0;
+    height  : 100%;
+    width   : 50%;
+
+    box-shadow      : 0 0 100px 100px #000000;
+    background-color: #000000;
+}
+
+#services a span {
+    position   : absolute;
+    top        : 50%;
+    left       : 10%;
+    transform  : translateY(-50%);
+    font-size  : 30px;
+    text-shadow: 0 0 5px #000000;
+    z-index    : 2;
+    opacity    : .5;
+}

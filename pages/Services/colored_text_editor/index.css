@@ -1,0 +1,51 @@
+* {
+    box-sizing : border-box;
+    font-family: monospace;
+    color      : #FFF;
+}
+
+body {
+    display       : flex;
+    flex-direction: column;
+
+    height    : calc(100vh);
+    margin    : 0;
+    background: #000;
+}
+
+
+#colored_text_editor {
+    position: relative;
+    width   : 100%;
+    height  : 100%;
+}
+
+#colored_text_editor>textarea,
+#colored_text_editor>div {
+    position: absolute;
+    left    : 0;
+    top     : 0;
+
+    font-size  : 15px;
+    width      : 100%;
+    height     : 100%;
+    white-space: nowrap;
+}
+
+#colored_text_editor>div {
+    pointer-events: none;
+    user-select   : none;
+    overflow      : hidden;
+}
+
+#colored_text_editor>textarea {
+    background: none;
+    border    : none;
+    resize    : none;
+    outline   : none;
+    padding   : 0;
+    margin    : 0;
+
+    color      : rgba(0, 0, 0, 0);
+    caret-color: #FFFFFF;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Workspace</title>
+    <link rel="stylesheet" href="./assets/index.css">
+</head>
+
+<body>
+    <h1>My Workspace</h1>
+    <div id="selects">
+        <button data-block="services" class="active">Services</button>
+        <button data-block="code">Code</button>
+    </div>
+    <div id="container">
+        <div id="services">
+            <a class="block" href="./pages/Services/import_fonts/index.html" draggable="false">
+                <img src="./pages/Services/import_fonts/preview.jpg" alt="preview" class="preview">
+                <span>Import fonts</span>
+            </a>
+            <a class="block" href="./pages/Services/colored_text_editor/index.html" draggable="false">
+                <img src="./pages/Services/colored_text_editor/preview.jpg" alt="preview" class="preview">
+                <span>Colored Text Editor</span>
+            </a>
+        </div>
+        <div id="code" class="disabled"></div>
+    </div>
+    <script src="./assets/js/build.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+* {
+    box-sizing : border-box;
+    font-family: monospace;
+    color      : #FFF;
+}
+
+body {
+    display       : flex;
+    flex-direction: column;
+
+    height    : calc(100vh);
+    margin    : 0;
+    padding   : 10px;
+    background: #000;
+
+}
+
+#form {
+    flex-grow: 1;
+}
+textarea {
+    flex-grow: 999;
+}
+
+
+
+
+#form {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+#form input {
+    background   : none;
+    border       : 1px solid #FFF;
+    border-radius: 5px;
+}
+
+#form input[type=text] {
+    width : 300px;
+    height: 25px;
+}
+
+#form>div {
+    display    : flex;
+    align-items: center;
+    margin     : 10px;
+}
+
+#form>div>span {
+    margin-right: 20px;
+    font-size   : 20px;
+}
+
+
+textarea {
+    width        : 100%;
+    /* height       : calc(100% - 70px); */
+    resize       : none;
+    padding      : 20px;
+    background   : none;
+    border       : 1px solid #FFF;
+    border-radius: 10px;
+}
+
+#drop-text {
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+
+    font-size     : 30vmin;
+    opacity       : 0;
+    pointer-events: none;
+    transition    : .2s;
+}
+
+body.drag #drop-text {
+    opacity: 1;
+}

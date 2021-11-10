@@ -1,0 +1,14 @@
+{
+  "name": "my-workspace-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && webpack"
+  },
+  "author": "Vlad",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13"
+  },
+  "description": ""
+}

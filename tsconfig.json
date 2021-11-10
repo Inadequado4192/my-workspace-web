@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ESNext",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "strict": true,
+        "rootDir": "./assets/ts",
+        "outDir": "./assets/js",
+    },
+    "exclude": [
+        "pages",
+        "node_modules"
+    ]
+}
