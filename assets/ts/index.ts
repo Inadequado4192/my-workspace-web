@@ -29,3 +29,4 @@ export namespace Interface {
         });
     })();
 }
+console.log("__dirname: " + __filename);

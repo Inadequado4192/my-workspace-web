@@ -28,3 +28,4 @@ var Interface;
         });
     })();
 })(Interface = exports.Interface || (exports.Interface = {}));
+console.log("__dirname: " + __filename);
